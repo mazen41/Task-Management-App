@@ -1,0 +1,141 @@
+$color_1: white;
+$font-family_1: Figtree;
+$font-family_2: 'Excon', sans-serif;
+$font-family_3: 'General Sans', sans-serif;
+$background-color_1: #181820;
+$background-color_2: hsla(0, 0%, 80%, 0.18);
+$user-dropdown-bg: #f1f1f1;
+$user-dropdown-text-color: #333;
+$transition-duration: 0.6s;
+body {
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 35%;
+        top: 30%;
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background: #21212B;
+            border-radius: 6px;
+            transition: 0.6s;
+            flex-direction: column;
+            animation: fadeIn;
+            animation-duration: 1s;
+            margin-left: 78px;
+            margin-top: 69px;
+            gap: 14px;
+                input {
+                    height: 36px;
+                    line-height: 28px;
+                    border: 2px solid transparent;
+                    border-radius: 8px;
+                    outline: none;
+                    color: white;
+                    transition: 0.3s ease;
+                    background: no-repeat;
+                    border: 1px solid #30303d;
+                    padding-left: 10px;
+                    width: 254px;
+                    padding-right: 12px;
+                }
+
+                input:focus {
+                    border-image: linear-gradient(34deg, rgba(206, 76, 205, 1) 0%, rgba(252, 126, 152, 1) 66%, rgba(239, 147, 120, 1) 91%);
+                    border-image-slice: 1;
+                    border-radius: 8px;
+                }
+
+                input[type="date"]::-webkit-calendar-picker-indicator {
+                    filter: invert(1);
+                }
+                
+                button {
+                    min-width: 100px;
+                    height: 45px;
+                    padding: 8px;
+                    border-radius: 5px;
+                    border: 1.5px solid #30303d;
+                    box-shadow: 0px 0px 20px -20px;
+                    cursor: pointer;
+                    transition: all 0.6s ease-in-out 0ms;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    user-select: none;
+                    font-family: "Poppins", sans-serif;
+                    background: none;
+                    color: white;
+
+                    &:hover {
+                        background-color: $background-color_2;
+                    }
+                }
+
+            }
+
+        }
+
+}
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@media (max-width: 625px) {
+    body .container {
+        left: 20%;
+    }
+}
+
+@media (max-width: 500px) {
+    body .container {
+        left: 0%;
+    }
+}
+
+@media (max-width: 415px) {
+    body .container form {
+        margin-left: 20px;
+    }
+}
+
+
+@media (max-width: 350px) {
+    body .container form {
+       width: 180px;
+
+
+       input {
+            width: 170px;
+       }
+    }
+}
+
+
+@media (max-width: 350px) {
+    body .container form {
+       width: 142px;
+        margin-left:10px;
+
+       input {
+            width: 140px;
+       }
+    }
+
+    
+}

@@ -1,0 +1,210 @@
+$color_1: white;
+$font-family_1: Figtree;
+$font-family_2: 'Excon', sans-serif;
+$font-family_3: 'General Sans', sans-serif;
+$background-color_1: #181820;
+$background-color_2: hsla(0, 0%, 80%, 0.18);
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: $background-color_1;
+
+    .container {
+        padding-left: 80px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-right: 18px;
+        color: white;
+
+        .background {
+            margin-top: 20px;
+            transition: 0.6s;
+
+            img {
+                width: 597px;
+                border-radius: 7px;
+                height: 842px;
+                transition: 0.6s;
+                animation: fadeInLeft;
+                animation-duration: 2s;
+
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-family: $font-family_2;
+
+            .inputGroup {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                input {
+                    width: 422px;
+                    height: 43px;
+                    background-color: #0A0A0A;
+                    outline: none;
+                    border: 1px solid #30303d;
+                    border-radius: 5px;
+                    padding-left: 10px;
+                    color: white;
+                    transition: 0.6s ease;
+
+
+                }
+
+                input:focus {
+                    border-image: linear-gradient(34deg, rgba(206, 76, 205, 1) 0%, rgba(252, 126, 152, 1) 66%, rgba(239, 147, 120, 1) 91%);
+                    border-image-slice: 1;
+                    border-radius: 5px;
+                }
+
+                .input_label {
+                    font-size: 14px;
+                }
+            }
+
+            .end-section {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                a {
+                    text-decoration: none;
+                    color: lightgray;
+                    font-family: $font-family_2;
+                    font-size: 14px;
+                    padding-left: 5px;
+                    transition: 0.6s;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+
+                button {
+                    width: 101px;
+                    text-align: center;
+                    height: 34px;
+                    padding-top: 2px;
+                    border: 1px solid #30303d;
+                    border-radius: 11px;
+                    margin-top: -2px;
+                    transition: 0.6s;
+                    background: #0A0A0A;
+                    color: white;
+                    transition: 0.8s;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    background: linear-gradient(34deg, rgba(206, 76, 205, 1) 0%, rgba(252, 126, 152, 1) 66%, rgba(239, 147, 120, 1) 91%);
+                    transform: scale(1.04);
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media(max-width: 1100px) {
+    body {
+        .container {
+            .background {
+                img {
+                    display: none;
+                }
+            }
+
+            form {
+                margin-top: 28%;
+
+                
+            }
+        }
+    }
+}
+
+@media(max-width: 520px) {
+    body {
+        .container {
+            padding-left: 15px;
+
+            form {
+
+                .inputGroup {
+                    input {
+
+                        width: 335px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 366px) {
+    body {
+        .container {
+
+            form {
+                margin-top: 62%;
+
+                .inputGroup {
+                    input {
+                        width: 244px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 278px) {
+    body {
+        .container {
+
+            form {
+                .inputGroup {
+                    input {
+                        width: 181px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 210px) {
+    body {
+        .container {
+
+            form {
+                .inputGroup {
+                    input {
+                        width: 139px;
+                    }
+                }
+            }
+        }
+    }
+}

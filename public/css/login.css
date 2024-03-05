@@ -1,0 +1,134 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #181820;
+}
+body .container {
+  padding-left: 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-right: 18px;
+  color: white;
+}
+body .container .background {
+  margin-top: 20px;
+  transition: 0.6s;
+}
+body .container .background img {
+  width: 597px;
+  border-radius: 7px;
+  height: 842px;
+  transition: 0.6s;
+  animation: fadeInLeft;
+  animation-duration: 2s;
+}
+body .container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Excon", sans-serif;
+}
+body .container form .inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body .container form .inputGroup input {
+  width: 422px;
+  height: 43px;
+  background-color: #0A0A0A;
+  outline: none;
+  border: 1px solid #30303d;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: white;
+  transition: 0.6s ease;
+}
+body .container form .inputGroup input:focus {
+  -o-border-image: linear-gradient(34deg, rgb(206, 76, 205) 0%, rgb(252, 126, 152) 66%, rgb(239, 147, 120) 91%);
+     border-image: linear-gradient(34deg, rgb(206, 76, 205) 0%, rgb(252, 126, 152) 66%, rgb(239, 147, 120) 91%);
+  border-image-slice: 1;
+  border-radius: 5px;
+}
+body .container form .inputGroup .input_label {
+  font-size: 14px;
+}
+body .container form .end-section {
+  display: flex;
+  justify-content: space-between;
+}
+body .container form .end-section a {
+  text-decoration: none;
+  color: lightgray;
+  font-family: "Excon", sans-serif;
+  font-size: 14px;
+  padding-left: 5px;
+  transition: 0.6s;
+}
+body .container form .end-section a:hover {
+  text-decoration: underline;
+}
+body .container form .end-section button {
+  width: 101px;
+  text-align: center;
+  height: 34px;
+  border: 1px solid #30303d;
+  border-radius: 11px;
+  background: #0A0A0A;
+  color: white;
+  transition: 0.8s;
+  cursor: pointer;
+  margin-top: -7px;
+}
+body .container form .end-section button:hover {
+  background: linear-gradient(34deg, rgb(206, 76, 205) 0%, rgb(252, 126, 152) 66%, rgb(239, 147, 120) 91%);
+  transform: scale(1.04);
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 1100px) {
+  body .container .background img {
+    display: none;
+  }
+  body .container form {
+    margin-top: 28%;
+  }
+}
+@media (max-width: 520px) {
+  body .container {
+    padding-left: 15px;
+  }
+  body .container form .inputGroup input {
+    width: 335px;
+  }
+}
+@media (max-width: 366px) {
+  body .container form {
+    margin-top: 62%;
+  }
+  body .container form .inputGroup input {
+    width: 244px;
+  }
+}
+@media (max-width: 278px) {
+  body .container form .inputGroup input {
+    width: 181px;
+  }
+}
+@media (max-width: 210px) {
+  body .container form .inputGroup input {
+    width: 139px;
+  }
+}

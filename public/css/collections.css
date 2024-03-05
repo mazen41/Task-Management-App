@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap);
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #181820;
+}
+body .container {
+  display: flex;
+  flex-direction: column;
+}
+body .container .delete-form {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+body .container .delete-form .title h2 {
+  color: white;
+  font-family: "Excon", sans-serif;
+  font-size: 25px;
+}
+body .container .delete-form button {
+  width: 167px;
+  text-align: center;
+  height: 43px;
+  padding-top: 2px;
+  border: 1px solid #30303d;
+  border-radius: 11px;
+  transition: 0.6s;
+  background: none;
+  color: white;
+  align-self: center;
+  margin-top: 11px;
+  cursor: pointer;
+  font-family: "Excon", sans-serif;
+}
+body .container .delete-form button:hover {
+  background-color: hsla(0, 0%, 80%, 0.18);
+  transform: scale(1.03);
+}
+body .container .collections {
+  display: flex;
+  margin-left: 18%;
+  margin-top: 30px;
+  color: white;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+body .container .collections .alert {
+  background-color: #21212B;
+  width: 244px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  padding-top: 8px;
+  border-radius: 18px;
+  animation: fadeIn;
+  animation-duration: 1s;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+}
+body .container .collections .alert p {
+  width: 150px;
+}
+body .container .collections .category {
+  background-color: #21212B;
+  width: 244px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: center;
+  padding-top: 8px;
+  border-radius: 18px;
+  padding-left: 19px;
+  animation: fadeIn;
+  animation-duration: 1s;
+}
+body .container .collections .category img {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
+body .container .collections .category .deatils {
+  margin-top: 18px;
+  margin-left: 1px;
+  color: #70707b;
+  font-weight: bold;
+}
+body .container .collections .category .deatils p:first-child {
+  font-size: 22px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@media (max-width: 345px) {
+  body .container .collections {
+    margin-left: 5%;
+  }
+}

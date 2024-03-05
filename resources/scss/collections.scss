@@ -1,0 +1,129 @@
+$color_1: white;
+$font-family_1: Figtree;
+$font-family_2: 'Excon', sans-serif;
+$font-family_3: 'General Sans', sans-serif;
+$background-color_1: #181820;
+$background-color_2: hsla(0, 0%, 80%, 0.18);
+$user-dropdown-bg: #f1f1f1;
+$user-dropdown-text-color: #333;
+$transition-duration: 0.6s;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: $background-color_1;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        .delete-form {
+            width: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            .title {
+                h2 {
+                    color: white;
+                    font-family: $font-family_2;
+                    font-size: 25px;
+                }
+            }
+
+            button {
+                width: 167px;
+                text-align: center;
+                height: 43px;
+                padding-top: 2px;
+                border: 1px solid #30303d;
+                border-radius: 11px;
+                margin-top: -2px;
+                transition: 0.6s;
+                background: none;
+                color: white;
+                align-self: center;
+                margin-top: 11px;
+                cursor: pointer;
+                font-family: $font-family_2;
+                &:hover {
+                    background-color: $background-color_2;
+			        transform: scale(1.03);
+                }
+            }
+        }
+
+        .collections {
+            display: flex;
+            margin-left: 18%;
+            margin-top: 30px;
+            color: white;
+            gap: 20px;
+            flex-wrap: wrap;
+            .alert {
+                background-color: #21212B;
+                width: 244px;
+                display: flex;
+                flex-direction: column;
+                height: 200px;
+                padding-top: 8px;
+                border-radius: 18px;
+                animation: fadeIn;
+                animation-duration: 1s;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Poppins', sans-serif;
+                flex-wrap: wrap;
+                p {
+                    width: 150px;
+                }
+            }
+            .category {
+                background-color: #21212B;
+                width: 244px;
+                display: flex;
+                flex-direction: column;
+                height: 200px;
+                justify-content: center;
+                padding-top: 8px;
+                border-radius: 18px;
+                padding-left: 19px;
+                animation: fadeIn;
+                animation-duration: 1s;
+                img {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 5px;
+                }
+                .deatils {
+                    margin-top: 18px;
+                    margin-left: 1px;
+                    color: #70707b;
+                    font-weight: bold;
+                    p:first-child  {
+                        font-size: 22px;
+                    }
+                }
+                
+            }
+        }
+            
+    }
+
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@media (max-width: 345px) {
+    body .container .collections {
+        margin-left: 5%;
+    }
+}

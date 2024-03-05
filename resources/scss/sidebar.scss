@@ -1,0 +1,113 @@
+$color_1: white;
+$font-family_1: Figtree;
+$font-family_2: 'Excon', sans-serif;
+$font-family_3: 'General Sans', sans-serif;
+$background-color_1: #181820;
+$background-color_2: hsla(0, 0%, 80%, 0.18);
+$background_color_3: #21212B;
+$user-dropdown-bg: #f1f1f1;
+$user-dropdown-text-color: #333;
+$transition-duration: 0.6s;
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+    transition: 0.6s;
+    
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
+
+    .lines {
+        margin-left: 7px;
+        cursor: pointer;
+    }
+
+    .container_side {
+        background-color: $background_color_3;
+        padding-left: 16px;
+        width: 197px;
+        min-height: 823px;
+        margin-top: -17px;
+        transition: 0.8s;
+        .title {
+            padding-top: 19px;
+            display: flex;
+            justify-content: space-between;
+            h2 {
+                font-size: 16px;
+                font-family: $font-family_2;
+            }
+            span {
+                align-self: center;
+                padding-right: 10px;
+                cursor: pointer;
+                color: rgba(252, 126, 152, 1);
+                display: none;
+            }
+        }
+
+        .categories {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+
+            .category {
+                display: flex;
+                transition: 0.6s;
+                opacity: 0.6;
+                gap: 6px;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            img {
+                height: 20px;
+                padding-top: 14px;
+            }
+
+            a {
+                font-size: 19px;
+                font-family: "Excon", sans-serif;
+                text-decoration: none;
+                color: white;
+                padding-top: 13px;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 3000px) {
+    .lines {
+        display: none;
+    }
+    // .container_side .title span {
+    //     display: none;
+    // }
+}
+
+
+@media (max-width: 733px) {
+    .lines {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+}
